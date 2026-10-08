@@ -1,0 +1,30 @@
+# Reproducible sample config for AMI Meeting Corpus evaluation.
+# Paths point at local data that is not committed to Git.
+
+project:
+  name: real-time-multi-speaker-meeting-intelligence
+  sample_id: ami_sample_v1
+
+data:
+  manifest_path: data/manifests/ami_sample.json
+  raw_root: data/raw
+  processed_root: data/processed
+
+pipeline:
+  diarization:
+    backend: pyannote
+    # model: pyannote/speaker-diarization-2.1  # enable after HF access is confirmed
+  asr:
+    backend: placeholder
+    language: en
+
+evaluation:
+  metrics:
+    - der
+    - wer
+    - action_item_f1
+    - latency_p95
+  output_dir: outputs
+
+demo:
+  default_input: outputs/sample_transcript.json

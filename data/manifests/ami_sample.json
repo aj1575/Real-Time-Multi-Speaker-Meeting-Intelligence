@@ -1,0 +1,15 @@
+{
+  "dataset": "AMI",
+  "sample_id": "ami_sample_v1",
+  "description": "Placeholder manifest for a single AMI meeting sample. Replace paths after local download.",
+  "meetings": [
+    {
+      "meeting_id": "ES2002a",
+      "audio_path": "data/raw/ami/ES2002a/audio.wav",
+      "reference_rttm": "data/raw/ami/ES2002a/reference.rttm",
+      "reference_transcript": "data/raw/ami/ES2002a/transcript.txt",
+      "num_speakers": 4,
+      "notes": "Paths are local-only; audio is not stored in this repository."
+    }
+  ]
+}

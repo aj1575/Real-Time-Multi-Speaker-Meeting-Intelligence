@@ -60,8 +60,8 @@ Do not commit AMI audio, restricted annotations, access tokens, Hugging Face tok
 ### 1. Clone the repository
 
 ```bash
-git clone <GITHUB-REPOSITORY-URL>
-cd <REPOSITORY-DIRECTORY>
+git clone https://github.com/aj1575/Real-Time-Multi-Speaker-Meeting-Intelligence.git
+cd Real-Time-Multi-Speaker-Meeting-Intelligence
 ```
 
 ### 2. Create a virtual environment
