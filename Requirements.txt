@@ -1,0 +1,19 @@
+# Core data and configuration
+numpy>=1.26,<3
+pandas>=2.2,<3
+pyyaml>=6.0,<7
+python-dotenv>=1.0,<2
+
+# Evaluation and testing
+jiwer>=3.0,<4
+pytest>=8.0,<9
+
+# Notebook and visualization support
+jupyter>=1.0,<2
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
+
+# Add the project-approved versions after model access and hardware are confirmed.
+# pyannote.audio==2.1.1
+# torch==<team-approved-version>
+# transformers==<team-approved-version>
