@@ -1,0 +1,6 @@
+stage,what,result
+1 · Raw,"downloaded audio, reference RTTMs, word XML files","170 audio files, 170 RTTMs, 678 word files"
+2 · Cleaned,validation + saved fixes,168/170 passed at first -> 170/170 usable after 2 fixes
+3 · Transformed,"words, speaker turns, summary sentences","1,140,236 words | 82,970 turns | 2,624 summary sentences"
+4 · Prepared,manifest per split (+ checksums),"train 136, dev 18, test 16 meetings"
+Warehouse,DuckDB tables + run history,"8 tables, 2 run(s) recorded"
