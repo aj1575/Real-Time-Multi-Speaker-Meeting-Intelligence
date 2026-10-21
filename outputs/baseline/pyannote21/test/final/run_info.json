@@ -1,0 +1,28 @@
+{
+  "run_id": "20261021_084955",
+  "split": "test",
+  "pipeline": "pyannote/speaker-diarization@2.1",
+  "protocol": "AMI.SpeakerDiarization.only_words",
+  "collar": 0.0,
+  "skip_overlap": false,
+  "seed": 42,
+  "published": {
+    "DER": 18.91,
+    "FA": 4.48,
+    "Miss": 9.51,
+    "Conf": 4.91
+  },
+  "tolerance": 1.0,
+  "python": "3.9.23",
+  "torch": "1.13.1+cu117",
+  "pyannote_audio": "2.1.1",
+  "gpu": "NVIDIA A40",
+  "versions": {
+    "python": "3.9.23",
+    "torch": "1.13.1+cu117",
+    "pyannote.audio": "2.1.1",
+    "pyannote.database": "4.1.3",
+    "pyannote.metrics": "3.2.1",
+    "gpu": "NVIDIA A40"
+  }
+}
