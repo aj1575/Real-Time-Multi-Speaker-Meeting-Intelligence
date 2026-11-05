@@ -13,6 +13,9 @@ jupyter>=1.0,<2
 matplotlib>=3.8,<4
 seaborn>=0.13,<1
 
+# Audio I/O for segment cropping
+soundfile>=0.12,<1
+
 # Add the project-approved versions after model access and hardware are confirmed.
 # pyannote.audio==2.1.1
 # torch==<team-approved-version>

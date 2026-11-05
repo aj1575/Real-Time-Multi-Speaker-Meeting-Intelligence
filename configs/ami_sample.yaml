@@ -1,5 +1,5 @@
 # Reproducible sample config for AMI Meeting Corpus evaluation.
-# Paths point at local data that is not committed to Git.
+# Raw audio stays local under data/raw and must not be committed.
 
 project:
   name: real-time-multi-speaker-meeting-intelligence
@@ -9,13 +9,21 @@ data:
   manifest_path: data/manifests/ami_sample.json
   raw_root: data/raw
   processed_root: data/processed
+  annotations_root: data/raw
+  meeting_id: ES2002a
+  audio_path: data/raw/amicorpus/ES2002a/audio/ES2002a.Mix-Headset.wav
 
 pipeline:
+  device: auto  # auto | cpu | cuda
+  # Limit seconds for local CPU smoke runs; set null/omit for full meeting.
+  max_duration_seconds: 60
   diarization:
     backend: pyannote
-    # model: pyannote/speaker-diarization-2.1  # enable after HF access is confirmed
+    # 3.1 works with current pyannote.audio; 2.1 metric reproduction remains pending.
+    model: pyannote/speaker-diarization-3.1
   asr:
-    backend: placeholder
+    backend: whisper
+    model: openai/whisper-tiny
     language: en
 
 evaluation:
@@ -27,4 +35,4 @@ evaluation:
   output_dir: outputs
 
 demo:
-  default_input: outputs/sample_transcript.json
+  default_input: outputs/ES2002a_transcript.json

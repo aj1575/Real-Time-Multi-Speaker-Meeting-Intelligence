@@ -1,15 +1,33 @@
 {
   "dataset": "AMI",
   "sample_id": "ami_sample_v1",
-  "description": "Placeholder manifest for a single AMI meeting sample. Replace paths after local download.",
+  "description": "AMI Part A local sample. Currently train-only (ES2002a) until more meetings are downloaded.",
+  "split_protocol": {
+    "type": "meeting_level",
+    "splits": ["train"],
+    "notes": "Part A uses the train split only. Validation/test meetings can be added later without changing ES2002a."
+  },
   "meetings": [
     {
       "meeting_id": "ES2002a",
-      "audio_path": "data/raw/ami/ES2002a/audio.wav",
-      "reference_rttm": "data/raw/ami/ES2002a/reference.rttm",
-      "reference_transcript": "data/raw/ami/ES2002a/transcript.txt",
+      "audio_path": "data/raw/amicorpus/ES2002a/audio/ES2002a.Mix-Headset.wav",
+      "headset_paths": [
+        "data/raw/amicorpus/ES2002a/audio/ES2002a.Headset-0.wav",
+        "data/raw/amicorpus/ES2002a/audio/ES2002a.Headset-1.wav",
+        "data/raw/amicorpus/ES2002a/audio/ES2002a.Headset-2.wav",
+        "data/raw/amicorpus/ES2002a/audio/ES2002a.Headset-3.wav"
+      ],
+      "reference_segments": [
+        "data/raw/segments/ES2002a.A.segments.xml",
+        "data/raw/segments/ES2002a.B.segments.xml",
+        "data/raw/segments/ES2002a.C.segments.xml",
+        "data/raw/segments/ES2002a.D.segments.xml"
+      ],
+      "reference_rttm": null,
+      "reference_transcript": null,
       "num_speakers": 4,
-      "notes": "Paths are local-only; audio is not stored in this repository."
+      "split": "train",
+      "notes": "Local baseline meeting with audio + annotations."
     }
   ]
 }
