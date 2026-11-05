@@ -1,0 +1,3 @@
+torch 1.13.1+cu117 | pyannote.audio 2.1.1 | GPU available: True
+name, memory.total [MiB], driver_version
+NVIDIA A40, 46068 MiB, 595.91.07

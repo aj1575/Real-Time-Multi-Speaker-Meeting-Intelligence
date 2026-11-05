@@ -1,0 +1,4 @@
+split,meetings,hours,speech_hours,overlap_min,avg_speakers,segments,avg_meeting_overlap_pct,pooled_overlap_pct,unique_speakers
+train,136,80.67,66.04,530.48,3.99,66816,12.68,13.39,152
+dev,18,9.67,7.59,64.33,4.0,8664,13.55,14.13,21
+test,16,9.06,7.29,63.78,3.94,7493,13.96,14.58,16
