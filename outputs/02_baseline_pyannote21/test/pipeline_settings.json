@@ -1,0 +1,27 @@
+{
+  "pipeline": "pyannote/speaker-diarization@2.1",
+  "seed": 42,
+  "der_variant": {
+    "collar": 0.0,
+    "skip_overlap": false
+  },
+  "hyper_parameters": {
+    "segmentation": {
+      "min_duration_off": 0.5817029604921046,
+      "threshold": 0.4442333667381752
+    },
+    "clustering": {
+      "method": "centroid",
+      "min_cluster_size": 15,
+      "threshold": 0.7153814381597874
+    }
+  },
+  "versions": {
+    "python": "3.9.23",
+    "torch": "1.13.1+cu117",
+    "pyannote.audio": "2.1.1",
+    "pyannote.database": "4.1.3",
+    "pyannote.metrics": "3.2.1",
+    "gpu": "NVIDIA A40"
+  }
+}
