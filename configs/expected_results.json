@@ -1,0 +1,31 @@
+{
+  "_about": "Numbers a re-run must reproduce. Checked by scripts/check_reproduction.py. Tolerances are in percentage points. Do not edit a value after seeing a new run; add a new run_id instead.",
+  "baseline": {
+    "source": "Notebook 02, run 20261021_084955, NVIDIA A40, pyannote.audio 2.1.1, torch 1.13.1+cu117",
+    "summary_file": "outputs/02_baseline_pyannote21/test/summary.json",
+    "per_meeting_file": "outputs/02_baseline_pyannote21/test/per_meeting_results.csv",
+    "our_run": {
+      "tolerance_points": 0.1,
+      "values": {"der_%": 19.11, "miss_%": 8.65, "fa_%": 5.29, "conf_%": 5.17,
+                 "der_overlap_%": 37.58, "der_non_overlap_%": 12.28, "meetings": 16}
+    },
+    "published": {
+      "source": "Bredin 2023, Table 1, AMI headset-mix (Workbook 1, Table 7)",
+      "tolerance_points": 1.0,
+      "values": {"der_%": 18.91}
+    },
+    "per_meeting_tolerance_points": 0.1
+  },
+  "model1": {
+    "source": "Notebook 03a - fill in after the first complete run",
+    "summary_file": null,
+    "our_run": {"tolerance_points": 0.5, "values": {}},
+    "targets": {"der_%": 18.9, "der_overlap_%": 33.82}
+  },
+  "noise": {
+    "source": "Notebook 05 - fill in after the first complete run",
+    "summary_file": null,
+    "published": {"source": "Bredin 2023, AMI far-field (as cited in Workbook 1)", "tolerance_points": 1.0,
+                  "values": {"farfield_der_%": 27.1}}
+  }
+}
