@@ -1,0 +1,56 @@
+{
+  "run_id": "20261021_084955",
+  "split": "test",
+  "pipeline": "pyannote/speaker-diarization@2.1",
+  "gpu": "NVIDIA A40",
+  "meetings": 16,
+  "der_%": 19.11,
+  "miss_%": 8.65,
+  "fa_%": 5.29,
+  "conf_%": 5.17,
+  "der_95_range_%": [
+    16.34,
+    21.71
+  ],
+  "spread_method": "bootstrap over meetings (2000 resamples); pipeline is deterministic",
+  "der_overlap_%": 37.58,
+  "der_non_overlap_%": 12.28,
+  "published_der_%": 18.91,
+  "gap_points": 0.2,
+  "reproduced": true,
+  "processing_min_total": 32.9,
+  "overlap_share_of_speech_%": 14.58,
+  "der_overlap_to_non_overlap_ratio": 3.06,
+  "model1_target_overlap_der_%": 33.82,
+  "invented_speaker_min": 15.0,
+  "invented_speaker_inside_overlap_%": 64.9,
+  "seed": 42,
+  "protocol": "AMI.SpeakerDiarization.only_words (test, 16 meetings)",
+  "scoring": {
+    "collar": 0.0,
+    "skip_overlap": false,
+    "uem": "official AMI diarization setup"
+  },
+  "published_parts_%": {
+    "DER": 18.91,
+    "FA": 4.48,
+    "Miss": 9.51,
+    "Conf": 4.91
+  },
+  "tolerance_points": 1.0,
+  "speaker_count": {
+    "correct number": 4,
+    "too many (extra)": 11,
+    "too few": 1
+  },
+  "overall_rtf": 0.0604,
+  "data_check": "audio SHA-256 matches notebook 01 manifest",
+  "versions": {
+    "python": "3.9.23",
+    "torch": "1.13.1+cu117",
+    "pyannote.audio": "2.1.1",
+    "pyannote.database": "4.1.3",
+    "pyannote.metrics": "3.2.1",
+    "gpu": "NVIDIA A40"
+  }
+}
