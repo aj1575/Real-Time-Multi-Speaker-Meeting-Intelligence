@@ -42,3 +42,13 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+
+# Cloud Pipeline - sensitive credentials
+credentials/
+**/credentials/
+*-service-account.json
+*service-account-key*.json
+.smtp.env
+smtp.env
+**/.smtp.env
+**/smtp.env

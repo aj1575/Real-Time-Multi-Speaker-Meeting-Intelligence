@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body style="font-family: Arial, sans-serif; color: #333333;">
+
+    <h2 style="color: #C62828;">
+        Meeting Intelligence - Pipeline Failure
+    </h2>
+
+    <p>
+        An Apache Airflow task has failed and requires attention.
+    </p>
+
+    <table cellpadding="10" cellspacing="0"
+           style="border-collapse: collapse; width: 100%; max-width: 650px;">
+
+        <tr style="background-color: #F5F5F5;">
+            <td><strong>Status</strong></td>
+            <td style="color: #C62828;"><strong>FAILED</strong></td>
+        </tr>
+
+        <tr>
+            <td><strong>Pipeline (DAG)</strong></td>
+            <td>{{ ti.dag_id }}</td>
+        </tr>
+
+        <tr style="background-color: #F5F5F5;">
+            <td><strong>Failed Task</strong></td>
+            <td>{{ ti.task_id }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>Execution ID</strong></td>
+            <td>{{ ti.run_id }}</td>
+        </tr>
+
+        <tr style="background-color: #F5F5F5;">
+            <td><strong>Attempt</strong></td>
+            <td>{{ ti.try_number }}</td>
+        </tr>
+
+        <tr>
+            <td><strong>Error</strong></td>
+            <td>{{ exception }}</td>
+        </tr>
+
+    </table>
+
+    <p>
+        <a href="{{ ti.log_url }}"
+           style="color: #1565C0; font-weight: bold;">
+            View Airflow Task Logs
+        </a>
+    </p>
+
+    <hr>
+
+    <p style="font-size: 12px; color: #777777;">
+        Automated notification from the
+        Real-Time Multi-Speaker Meeting Intelligence Project.
+    </p>
+
+</body>
+</html>

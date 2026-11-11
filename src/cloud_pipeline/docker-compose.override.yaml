@@ -1,0 +1,16 @@
+services:
+  airflow-worker:
+    env_file:
+      - .smtp.env
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/credentials/airflow-service-account.json
+    volumes:
+      - ./credentials/airflow-service-account.json:/opt/airflow/credentials/airflow-service-account.json:ro
+
+  airflow-scheduler:
+    env_file:
+      - .smtp.env
+
+  airflow-dag-processor:
+    env_file:
+      - .smtp.env
